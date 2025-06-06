@@ -158,4 +158,9 @@ const firebaseConfig = {
       saveUserBoard(user.uid);
     }
   });
+
+// Export for testing
+if (typeof module !== 'undefined') {
+  module.exports = { createDraggableElement };
+}
   

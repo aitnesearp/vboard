@@ -151,7 +151,7 @@ const firebaseConfig = {
       });
   }
   
-  // Save user's board automatically when user moves away
+  // Save the user's board just before the page unloads
   window.addEventListener('beforeunload', () => {
     const user = auth.currentUser;
     if (user) {

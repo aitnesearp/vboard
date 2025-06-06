@@ -3,7 +3,7 @@ const firebaseConfig = {
     apiKey: "AIzaSyBlSEsBtFjNbzGeMOIQCKSJ8PCLr6oYvBE",
     authDomain: "vboard-7c203.firebaseapp.com",
     projectId: "vboard-7c203",
-    storageBucket: "vboard-7c203.firebasestorage.app",
+    storageBucket: "vboard-7c203.appspot.com",
     messagingSenderId: "615042900708",
     appId: "1:615042900708:web:71e5dc14e78cfd12c102f1"
   };

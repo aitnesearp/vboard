@@ -39,6 +39,10 @@ const firebaseConfig = {
   });
   
   logoutButton.addEventListener('click', () => {
+    const user = auth.currentUser;
+    if (user) {
+      saveUserBoard(user.uid);
+    }
     auth.signOut().then(() => {
       loginButton.style.display = 'inline';
       logoutButton.style.display = 'none';
@@ -48,7 +52,7 @@ const firebaseConfig = {
   
   searchButton.addEventListener('click', async () => {
     const query = searchQuery.value;
-    const res = await fetch(`https://www.googleapis.com/customsearch/v1?q=${query}&cx=${CX}&searchType=image&key=${API_KEY}`);
+    const res = await fetch(`https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&cx=${CX}&searchType=image&key=${API_KEY}`);
     const data = await res.json();
     
     searchResults.innerHTML = '';
